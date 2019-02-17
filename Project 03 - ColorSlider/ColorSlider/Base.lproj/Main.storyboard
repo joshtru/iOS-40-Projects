@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="1CG-1w-WQy">
-                                <rect key="frame" x="37.5" y="153" width="300" height="361"/>
+                                <rect key="frame" x="37.5" y="117.5" width="300" height="432"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" text="ADJUST MY COLOR AND BRIGHTNESS" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zxd-lU-edZ">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="81"/>
@@ -28,7 +28,7 @@
                                             <constraint firstAttribute="height" constant="81" id="y1v-yH-PqW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                     </textView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LzC-PX-qUH">
                                         <rect key="frame" x="-2" y="121" width="304" height="31"/>
@@ -74,10 +74,28 @@
                                             <action selector="brightnessSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="yfF-Qd-p4w"/>
                                         </connections>
                                     </slider>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3Ie-zJ-Ehw">
+                                        <rect key="frame" x="39.5" y="401" width="221" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Night Mode: OFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmR-NT-58p">
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oq3-0D-hjU">
+                                                <rect key="frame" x="172" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="toggleNightMode:" destination="BYZ-38-t0r" eventType="valueChanged" id="QJn-LO-Rh8"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.063088613010000003" green="0.063088613010000003" blue="0.063088613010000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1CG-1w-WQy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TiK-9h-kHY"/>
                             <constraint firstItem="1CG-1w-WQy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="l13-IL-zmv"/>
@@ -86,6 +104,8 @@
                     </view>
                     <connections>
                         <outlet property="adjustText" destination="zxd-lU-edZ" id="oJF-vd-Z84"/>
+                        <outlet property="nightModeLable" destination="SmR-NT-58p" id="lu4-3t-94d"/>
+                        <outlet property="nightModeSwitch" destination="oq3-0D-hjU" id="Wv8-4F-gW8"/>
                         <outlet property="setBlueSlider" destination="hsS-rj-PLw" id="O8J-ZZ-52E"/>
                         <outlet property="setBrightness" destination="zFw-qr-UlH" id="BSu-PB-vai"/>
                         <outlet property="setGreenSlider" destination="OQy-hy-if3" id="jzb-0d-53G"/>
