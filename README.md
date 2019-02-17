@@ -6,5 +6,5 @@ Apps were built and tested with
   <li>Xcode</li>
   <li>Swift 4</li>
   <li>iPhone 8 Plus and iPhone Xs Max Simulator</li>
-  <li>iPhone 6 Plus Simulator</li>
+  <li>iPhone 6 Plus Device</li>
 </ul>
