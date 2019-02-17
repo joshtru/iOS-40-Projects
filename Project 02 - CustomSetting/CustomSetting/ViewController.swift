@@ -31,16 +31,18 @@ class ViewController: UIViewController {
     // Detect for night mode settings
     @objc func detectIfSettingsChanged() {
         if UserDefaults.standard.bool(forKey: "nightMode") {
+            nightMode = true
             view.backgroundColor = UIColor.black
             textView.keyboardAppearance = .dark
             textView.textColor = UIColor.white
-            nightMode = true
+            setNeedsStatusBarAppearanceUpdate()
         } else {
+            nightMode = false
             view.backgroundColor = UIColor.white
             textView.keyboardAppearance = .default
             textView.textColor = UIColor.black
             setNeedsStatusBarAppearanceUpdate()
-            nightMode = false
+            setNeedsStatusBarAppearanceUpdate()
         }
         
     }

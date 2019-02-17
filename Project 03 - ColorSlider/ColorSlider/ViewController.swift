@@ -71,6 +71,7 @@ class ViewController: UIViewController {
             setBrightness.thumbTintColor = UIColor.white
             setBrightness.maximumTrackTintColor = UIColor.white
             nightModeLable.text = "Night Mode: ON"
+            setNeedsStatusBarAppearanceUpdate()
         } else {
             nightModeCheck = false
             nightModeLable.textColor = UIColor.black
@@ -78,6 +79,7 @@ class ViewController: UIViewController {
             setBrightness.thumbTintColor = UIColor.black
             setBrightness.maximumTrackTintColor = UIColor.black
             nightModeLable.text = "Night Mode: OFF"
+            setNeedsStatusBarAppearanceUpdate()
             
         }
     }
@@ -85,9 +87,8 @@ class ViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         if nightModeCheck {
             return .lightContent
-        } else {
-            return .default
         }
+        return .default
     }
 
 }
