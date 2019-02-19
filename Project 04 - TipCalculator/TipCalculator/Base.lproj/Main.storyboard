@@ -30,7 +30,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FPg-A8-rhe">
                                         <rect key="frame" x="0.0" y="116" width="343" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tip(15%):" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcg-Rt-QAO">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tip (15%):" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcg-Rt-QAO">
                                                 <rect key="frame" x="0.0" y="0.0" width="278" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -61,8 +61,11 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="B8M-vx-a57">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="B8M-vx-a57">
                                         <rect key="frame" x="-2" y="197" width="347" height="31"/>
+                                        <connections>
+                                            <action selector="tipSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ys0-3b-XO2"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
@@ -78,6 +81,7 @@
                     </view>
                     <connections>
                         <outlet property="subTotalTextField" destination="DTW-JM-4z0" id="ZH7-rK-2qh"/>
+                        <outlet property="tipLabel" destination="wcg-Rt-QAO" id="p8u-Mw-OHc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
