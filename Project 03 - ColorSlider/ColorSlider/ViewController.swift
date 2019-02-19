@@ -84,6 +84,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK: - Change Status bar style
     override var preferredStatusBarStyle: UIStatusBarStyle {
         if nightModeCheck {
             return .lightContent

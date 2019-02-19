@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  ColorSlider
+//  TipCalculator
 //
-//  Created by Joshua Okoro on 2/17/19.
+//  Created by Joshua Okoro on 2/18/19.
 //  Copyright © 2019 Joshua Okoro. All rights reserved.
 //
 

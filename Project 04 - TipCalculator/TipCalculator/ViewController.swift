@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  ColorSlider
+//  TipCalculator
 //
-//  Created by Joshua Okoro on 2/17/19.
+//  Created by Joshua Okoro on 2/18/19.
 //  Copyright © 2019 Joshua Okoro. All rights reserved.
 //
 
@@ -12,9 +12,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        subTotalTextField.becomeFirstResponder()
     }
 
-
+    @IBOutlet weak var subTotalTextField: UITextField!
+    
 }
 
