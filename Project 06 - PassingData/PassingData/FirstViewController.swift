@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FirstViewController.swift
 //  PassingData
 //
 //  Created by Joshua Okoro on 2/21/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
