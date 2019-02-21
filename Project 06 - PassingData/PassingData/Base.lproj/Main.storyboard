@@ -42,6 +42,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="iXV-rR-Mxn" id="muV-oe-AVn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,6 +74,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="seH-LX-XIt"/>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="ESr-c2-PsC" id="bVL-yw-Rua"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBG-hD-E7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

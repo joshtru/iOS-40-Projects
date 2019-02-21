@@ -12,9 +12,12 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
+    @IBOutlet weak var textView: UITextView!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        sendMessage = textView.text
+    }
 
 }
 
