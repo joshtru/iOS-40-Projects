@@ -13,11 +13,21 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: - Outlets
     @IBOutlet weak var textView: UITextView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        sendMessage = textView.text
+        if segue.identifier == "secondView" {
+            let destinationVC = segue.destination as! SecondViewController
+            destinationVC.message = textView.text
+        }
     }
-
+    
+    // MARK: - Interactions
+    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "secondView", sender: self)
+    }
+    
 }
 

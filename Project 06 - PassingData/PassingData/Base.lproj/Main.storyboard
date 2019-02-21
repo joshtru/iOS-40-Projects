@@ -21,7 +21,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iXV-rR-Mxn">
                                 <rect key="frame" x="16" y="80" width="343" height="158"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -38,12 +37,13 @@
                     <navigationItem key="navigationItem" title="First View" id="Xr7-4s-BkC">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="bfV-aq-1hX">
                             <connections>
-                                <segue destination="LV6-eO-gUk" kind="show" id="cMJ-fh-29O"/>
+                                <action selector="doneButtonPressed:" destination="BYZ-38-t0r" id="Odb-EO-lHO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="textView" destination="iXV-rR-Mxn" id="muV-oe-AVn"/>
+                        <segue destination="LV6-eO-gUk" kind="show" identifier="secondView" id="axk-Sk-h96"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

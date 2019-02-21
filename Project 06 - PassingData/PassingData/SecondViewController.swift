@@ -8,14 +8,16 @@
 
 import UIKit
 
-var sendMessage: String?
 
 class SecondViewController: UIViewController {
+    
+    var message: String?
+    
     @IBOutlet weak var messageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        messageLabel.text = sendMessage ?? "No Message"
+        messageLabel.text = message ?? "No Message"
     }
     
 
