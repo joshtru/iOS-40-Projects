@@ -8,17 +8,35 @@
 
 import UIKit
 
+// MARK: - Protocol For Sending Message
+protocol MessageSecondView {
+    func messageFunction(data: String)
+}
+
 
 class SecondViewController: UIViewController {
     
+    var delegate: MessageSecondView?
+    
     var message: String?
     
-    @IBOutlet weak var messageLabel: UILabel!
+ // MARK: - Outlets
+    @IBOutlet weak var messageDisplay: UITextView!
+    
+    @IBOutlet weak var messageField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        messageLabel.text = message ?? "No Message"
+        
+        messageDisplay.text = message
     }
     
+    // MARK: - Interactions
+    
 
+    @IBAction func replyButton(_ sender: UIButton) {
+        delegate?.messageFunction(data: messageField.text!)
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
