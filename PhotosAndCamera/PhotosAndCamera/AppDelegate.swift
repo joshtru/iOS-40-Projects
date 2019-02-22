@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  PassingData
+//  PhotosAndCamera
 //
 //  Created by Joshua Okoro on 2/21/19.
 //  Copyright © 2019 Joshua Okoro. All rights reserved.
