@@ -9,6 +9,7 @@
 import Foundation
 
 class List {
-    var Title: String = ""
-    var description: String = ""
+    var data = ["Tea", "Bread", "Sugar", "Milk", "Cake"]
+    var cloudData = ["Chicken", "Beef", "Cheese", "Grill", "Spice"]
+    
 }
