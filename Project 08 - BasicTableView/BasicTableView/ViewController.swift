@@ -14,17 +14,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
+    // MARK: - Data
+    let list = ["Milk", "Egg", "Tea", "Bread"]
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    // MARK: - TableView
+    
+    // TableView Number of Sections
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
+    // TableView Number of Rows
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return list.count
+    }
+    
+    // TableView Return Data
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groceriesCell", for: indexPath)
-        cell.textLabel?.text = "Hello"
+        cell.textLabel?.text = list[indexPath.row]
         return cell
     }
 
