@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  PhotosAndCamera
+//  BasicTableView
 //
-//  Created by Joshua Okoro on 2/21/19.
+//  Created by Joshua Okoro on 2/23/19.
 //  Copyright © 2019 Joshua Okoro. All rights reserved.
 //
 
