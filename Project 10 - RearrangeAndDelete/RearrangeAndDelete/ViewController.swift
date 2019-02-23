@@ -12,13 +12,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: - Outlets
     @IBOutlet weak var listTable: UITableView!
-    
-    var listModel = List()
+    @IBOutlet weak var editButton: UIBarButtonItem!
     
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: - Data
+    var data = ["Tea", "Bread", "Sugar", "Milk", "Cake"]
     
     
     // MARK: - TableView
@@ -29,14 +31,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Returning number of cells
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listModel.data.count
+        return data.count
     }
     
     // Displaying Data on Cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell", for: indexPath)
         
-        cell.textLabel?.text = listModel.data[indexPath.row]
+        cell.textLabel?.text = data[indexPath.row]
         
         return cell
     }
@@ -50,7 +52,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
-            listModel.data.remove(at: indexPath.row)
+            data.remove(at: indexPath.row)
             
             tableView.deleteRows(at: [indexPath], with: .automatic)
             
@@ -59,14 +61,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    
     // Rearranging TableView
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let item = data[sourceIndexPath.row]
+        data.remove(at: sourceIndexPath.row)
+        data.insert(item, at: destinationIndexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        if listTable.isEditing {
+            return .none
+        } else {
+            return .delete
+        }
+    }
+    
     
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
-        sender.title = "Done"
+        listTable.isEditing = !listTable.isEditing
+       editButton.title =  editButton.title == "Reorder" ? "Done" : "Reorder"
     }
     
 
