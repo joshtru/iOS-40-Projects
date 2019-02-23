@@ -47,6 +47,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ssh-U1-pDD"/>
+                    <connections>
+                        <outlet property="groceriesTable" destination="ROP-k9-Z7Y" id="C93-G9-7Kq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
