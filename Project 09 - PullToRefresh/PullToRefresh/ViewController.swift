@@ -9,9 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    
     @IBOutlet weak var groceriesTable: UITableView!
     
     let pullRequest = UIRefreshControl()
+    
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cloudDataSet = Set(cloudData)
         
         if cloudDataSet.isSubset(of: listSet) {
+            pullRequest.attributedTitle = NSAttributedString(string: "Up To Date")
             pullRequest.endRefreshing()
         } else {
             list += cloudData
