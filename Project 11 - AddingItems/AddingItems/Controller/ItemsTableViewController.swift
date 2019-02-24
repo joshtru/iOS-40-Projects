@@ -34,33 +34,48 @@ class ItemsTableViewController: UITableViewController {
 
         return cell
     }
-
+    
+    @IBOutlet weak var editButton: UIBarButtonItem!
+    
+    
+    @IBAction func EditButtonPressed(_ sender: UIBarButtonItem) {
+        editButton.title = editButton.title == "Edit" ? "Done" : "Edit"
+        tableView.isEditing = !tableView.isEditing
+    }
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
 
-    /*
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            items.data.remove(at: indexPath.row)
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
 
     // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let item = items.data[sourceIndexPath.row]
+        items.data.remove(at: sourceIndexPath.row)
+        items.data.insert(item, at: destinationIndexPath.row)
     }
 
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+    
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+    }
+    
+    
 
     // MARK: - Navigation
 

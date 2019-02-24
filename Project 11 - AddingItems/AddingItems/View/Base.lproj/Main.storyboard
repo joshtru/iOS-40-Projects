@@ -34,10 +34,19 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Items" id="hrN-da-TpC">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="fKN-LE-Yvv"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="CMR-92-at2"/>
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="fKN-LE-Yvv">
+                            <connections>
+                                <action selector="EditButtonPressed:" destination="Uk8-2Y-Ufb" id="hpU-Dr-Nwa"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="CMR-92-at2">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="Uk8-2Y-Ufb" id="t3N-z9-qCv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="fKN-LE-Yvv" id="zTq-bG-aEb"/>
                         <segue destination="3KQ-Ku-SXO" kind="show" identifier="ToSecondView" id="em7-Pz-WBe"/>
                     </connections>
                 </tableViewController>
