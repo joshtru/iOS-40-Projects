@@ -71,8 +71,8 @@
 		8566C23722231DED00DF6180 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8566C23522231CDC00DF6180 /* AddItemViewController.swift */,
 				8566C23322231C1200DF6180 /* ItemsTableViewController.swift */,
+				8566C23522231CDC00DF6180 /* AddItemViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
