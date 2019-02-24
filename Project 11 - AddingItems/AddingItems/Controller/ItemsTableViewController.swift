@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemsTableViewController: UITableViewController {
+class ItemsTableViewController: UITableViewController, AddItem {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,17 +73,23 @@ class ItemsTableViewController: UITableViewController {
     
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "ToSecondView", sender: self)
     }
     
-    
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ToSecondView" {
+            let destinationVC = segue.destination as! AddItemViewController
+            destinationVC.delegate = self
+        }
+    }
+    
+    func newItem(data: String) {
+        items.data.append(data)
+    }
+    
+    // MARK: - Reload TableView after Adding Item
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
 
 }
