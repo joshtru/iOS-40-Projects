@@ -32,7 +32,16 @@ class ViewController: UIViewController {
     
     // MARK: - Interactions
     @IBAction func imageButtonPressed(_ sender: UIButton) {
-        
+        if imageButton.titleLabel?.text == "Circular Image" {
+            imageButton.setTitle("Square Image", for: .normal)
+            profileImage.layer.cornerRadius = 0
+            profileImage.layer.masksToBounds = false
+            profileImage.layer.borderColor = nil
+            profileImage.layer.borderWidth = 0
+        } else {
+            imageButton.setTitle("Circular Image", for: .normal)
+            imageLayout()
+        }
     }
     
 }
