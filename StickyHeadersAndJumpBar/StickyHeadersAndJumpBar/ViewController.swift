@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  AddingItems
+//  StickyHeadersAndJumpBar
 //
-//  Created by Joshua Okoro on 2/24/19.
+//  Created by Joshua Okoro on 2/25/19.
 //  Copyright © 2019 Joshua Okoro. All rights reserved.
 //
 
