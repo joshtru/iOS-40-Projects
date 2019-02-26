@@ -13,20 +13,20 @@
         <scene sceneID="UjI-QV-BQ5">
             <objects>
                 <tableViewController id="WYm-Sb-IL3" customClass="ContactsTableViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jAE-Dq-jAX">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="60" sectionFooterHeight="28" id="jAE-Dq-jAX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" id="KXU-vR-j22">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="60" id="KXU-vR-j22" customClass="HeaderTableViewCell" customModule="Contacts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="60" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KXU-vR-j22" id="45R-2z-Lb4">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEADER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5o-Un-Hsr">
-                                            <rect key="frame" x="16" y="11" width="65" height="21"/>
+                                            <rect key="frame" x="16" y="11" width="65" height="37"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -39,26 +39,28 @@
                                         <constraint firstItem="S5o-Un-Hsr" firstAttribute="top" secondItem="45R-2z-Lb4" secondAttribute="topMargin" id="spF-mi-f5A"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="headerLabel" destination="S5o-Un-Hsr" id="ynZ-xh-sU1"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ContactCell" id="8B2-7k-cfk">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ContactCell" rowHeight="60" id="8B2-7k-cfk" customClass="PersonTableViewCell" customModule="Contacts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="120" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8B2-7k-cfk" id="lYI-dA-J0q">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Mzw-gq-LfY">
-                                            <rect key="frame" x="10" y="0.0" width="214.5" height="44"/>
+                                            <rect key="frame" x="8" y="8" width="325" height="43.5"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UWX-Y1-aBp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="43.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="44" id="ivX-KT-83A"/>
-                                                        <constraint firstAttribute="height" constant="44" id="jqb-DE-FeT"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstName LastName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqN-pG-Lml">
-                                                    <rect key="frame" x="54" y="11.5" width="160.5" height="21"/>
+                                                    <rect key="frame" x="54" y="11.5" width="271" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="YIH-wY-Hf0"/>
                                                     </constraints>
@@ -70,11 +72,15 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Mzw-gq-LfY" firstAttribute="top" secondItem="lYI-dA-J0q" secondAttribute="top" id="7Nd-jN-aDT"/>
-                                        <constraint firstItem="Mzw-gq-LfY" firstAttribute="leading" secondItem="lYI-dA-J0q" secondAttribute="leadingMargin" constant="-6" id="gpJ-PO-T9R"/>
+                                        <constraint firstAttribute="bottom" secondItem="Mzw-gq-LfY" secondAttribute="bottom" constant="8" id="2im-3X-B5t"/>
+                                        <constraint firstItem="Mzw-gq-LfY" firstAttribute="leading" secondItem="lYI-dA-J0q" secondAttribute="leading" constant="8" id="6Uu-RS-V4D"/>
+                                        <constraint firstAttribute="trailing" secondItem="Mzw-gq-LfY" secondAttribute="trailing" constant="8" id="IqG-98-0wM"/>
+                                        <constraint firstItem="Mzw-gq-LfY" firstAttribute="top" secondItem="lYI-dA-J0q" secondAttribute="top" constant="8" id="fra-CQ-gW5"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="nameLabel" destination="OqN-pG-Lml" id="IP1-sm-Y1O"/>
+                                    <outlet property="profileImageView" destination="UWX-Y1-aBp" id="bGD-mz-vpR"/>
                                     <segue destination="Q0P-en-IUt" kind="show" id="uNJ-X8-6wh"/>
                                 </connections>
                             </tableViewCell>
@@ -106,7 +112,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="421" id="Xr6-G4-ibr" customClass="InfoCardTableViewCell" customModule="Contacts" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCardCell" rowHeight="421" id="Xr6-G4-ibr" customClass="InfoCardTableViewCell" customModule="Contacts" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="421"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xr6-G4-ibr" id="ZgZ-AO-l0H">

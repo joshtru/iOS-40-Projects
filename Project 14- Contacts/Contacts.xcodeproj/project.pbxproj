@@ -64,8 +64,8 @@
 		85245B3C2225C3400058FEEC /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				85245B5B2225CFE60058FEEC /* Model */,
 				85245B3D2225C3410058FEEC /* AppDelegate.swift */,
+				85245B5B2225CFE60058FEEC /* Model */,
 				85245B552225CABC0058FEEC /* View */,
 				85245B562225CACC0058FEEC /* Controller */,
 				85245B442225C3420058FEEC /* Assets.xcassets */,
