@@ -13,14 +13,15 @@
         <scene sceneID="UjI-QV-BQ5">
             <objects>
                 <tableViewController id="WYm-Sb-IL3" customClass="ContactsTableViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="60" sectionFooterHeight="28" id="jAE-Dq-jAX">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="40" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="jAE-Dq-jAX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="separatorColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="54" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="60" id="KXU-vR-j22" customClass="HeaderTableViewCell" customModule="Contacts" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="60" width="375" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" id="KXU-vR-j22" customClass="HeaderTableViewCell" customModule="Contacts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KXU-vR-j22" id="45R-2z-Lb4">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
@@ -33,6 +34,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstItem="S5o-Un-Hsr" firstAttribute="leading" secondItem="45R-2z-Lb4" secondAttribute="leadingMargin" id="1Mv-kV-Wh5"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="S5o-Un-Hsr" secondAttribute="bottom" constant="1" id="PnG-ah-Afi"/>
@@ -45,7 +47,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ContactCell" rowHeight="60" id="8B2-7k-cfk" customClass="PersonTableViewCell" customModule="Contacts" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="120" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="115.5" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8B2-7k-cfk" id="lYI-dA-J0q">
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="59.5"/>
@@ -82,7 +84,7 @@
                                 <connections>
                                     <outlet property="nameLabel" destination="OqN-pG-Lml" id="IP1-sm-Y1O"/>
                                     <outlet property="profileImageView" destination="UWX-Y1-aBp" id="bGD-mz-vpR"/>
-                                    <segue destination="Q0P-en-IUt" kind="show" id="uNJ-X8-6wh"/>
+                                    <segue destination="Q0P-en-IUt" kind="show" identifier="ToInfoCard" id="uNJ-X8-6wh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -107,21 +109,21 @@
         <!--Info Card-->
         <scene sceneID="5Xi-Gx-9gh">
             <objects>
-                <tableViewController id="Q0P-en-IUt" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fUe-lL-PFB">
+                <tableViewController id="Q0P-en-IUt" customClass="InfoCardTableViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="500" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fUe-lL-PFB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCardCell" rowHeight="421" id="Xr6-G4-ibr" customClass="InfoCardTableViewCell" customModule="Contacts" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="421"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCardCell" id="Xr6-G4-ibr" customClass="InfoCardTableViewCell" customModule="Contacts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="500"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xr6-G4-ibr" id="ZgZ-AO-l0H">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="420.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="499.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qY3-Kw-PIk">
-                                            <rect key="frame" x="8" y="8" width="359" height="288"/>
+                                            <rect key="frame" x="8" y="8" width="359" height="307"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4Km-iT-jEa">
                                                     <rect key="frame" x="0.0" y="0.0" width="359" height="94"/>
@@ -187,7 +189,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="zQq-NN-zIt">
-                                                    <rect key="frame" x="0.0" y="249.5" width="359" height="38.5"/>
+                                                    <rect key="frame" x="0.0" y="249.5" width="359" height="57.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cN-ge-uLb">
                                                             <rect key="frame" x="0.0" y="0.0" width="38" height="17"/>
@@ -195,8 +197,8 @@
                                                             <color key="textColor" red="0.10000000000000001" green="0.38500000000000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcT-Dw-luy">
-                                                            <rect key="frame" x="0.0" y="19" width="359" height="19.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcT-Dw-luy">
+                                                            <rect key="frame" x="0.0" y="19" width="250" height="38.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -212,6 +214,13 @@
                                         <constraint firstAttribute="trailing" secondItem="qY3-Kw-PIk" secondAttribute="trailing" constant="8" id="mTT-EW-uDP"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="emailLabel" destination="yTX-CK-7jC" id="nvd-IG-z7E"/>
+                                    <outlet property="nameLabel" destination="sdO-SA-ARI" id="E3E-me-A84"/>
+                                    <outlet property="notesLabel" destination="pcT-Dw-luy" id="KF7-jI-bhP"/>
+                                    <outlet property="numberLabel" destination="GKG-In-qIq" id="tob-fe-SxQ"/>
+                                    <outlet property="profileImageView" destination="J5r-Ze-pVC" id="HQi-54-tHi"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -259,4 +268,5 @@
         <image name="icon add" width="19" height="19"/>
         <image name="icon settings" width="19" height="19"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
