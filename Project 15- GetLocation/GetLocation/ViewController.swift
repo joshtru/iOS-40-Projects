@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  Contacts
+//  GetLocation
 //
-//  Created by Joshua Okoro on 2/26/19.
+//  Created by Joshua Okoro on 2/28/19.
 //  Copyright © 2019 Joshua Okoro. All rights reserved.
 //
 
@@ -12,9 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    @IBOutlet var locationLabel: UILabel!
+    
 
-
+    @IBAction func locationButtonPressed(_ sender: UIButton) {
+    }
+    
 }
 

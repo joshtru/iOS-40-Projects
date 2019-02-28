@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Contacts
+//  GetLocation
 //
-//  Created by Joshua Okoro on 2/26/19.
+//  Created by Joshua Okoro on 2/28/19.
 //  Copyright © 2019 Joshua Okoro. All rights reserved.
 //
 
