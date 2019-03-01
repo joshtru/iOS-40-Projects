@@ -7,25 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85245B6B222820A60058FEEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85245B6A222820A60058FEEC /* AppDelegate.swift */; };
-		85245B6D222820A60058FEEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85245B6C222820A60058FEEC /* ViewController.swift */; };
-		85245B70222820A60058FEEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85245B6E222820A60058FEEC /* Main.storyboard */; };
-		85245B72222820A80058FEEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85245B71222820A80058FEEC /* Assets.xcassets */; };
-		85245B75222820A80058FEEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85245B73222820A80058FEEC /* LaunchScreen.storyboard */; };
+		85245B8922296C6E0058FEEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85245B8822296C6E0058FEEC /* AppDelegate.swift */; };
+		85245B8B22296C6E0058FEEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85245B8A22296C6E0058FEEC /* ViewController.swift */; };
+		85245B8E22296C6E0058FEEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85245B8C22296C6E0058FEEC /* Main.storyboard */; };
+		85245B9122296C6E0058FEEC /* SaveDateLocationPhoto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85245B8F22296C6E0058FEEC /* SaveDateLocationPhoto.xcdatamodeld */; };
+		85245B9322296C700058FEEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85245B9222296C700058FEEC /* Assets.xcassets */; };
+		85245B9622296C700058FEEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85245B9422296C700058FEEC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		85245B67222820A60058FEEC /* GetLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		85245B6A222820A60058FEEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85245B6C222820A60058FEEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		85245B6F222820A60058FEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		85245B71222820A80058FEEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		85245B74222820A80058FEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		85245B76222820A80058FEEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85245B8522296C6E0058FEEC /* SaveDateLocationPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveDateLocationPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85245B8822296C6E0058FEEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		85245B8A22296C6E0058FEEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		85245B8D22296C6E0058FEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		85245B9022296C6E0058FEEC /* SaveDateLocationPhoto.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaveDateLocationPhoto.xcdatamodel; sourceTree = "<group>"; };
+		85245B9222296C700058FEEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85245B9522296C700058FEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		85245B9722296C700058FEEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		85245B64222820A60058FEEC /* Frameworks */ = {
+		85245B8222296C6E0058FEEC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,71 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		85245B5E222820A60058FEEC = {
+		85245B7C22296C6E0058FEEC = {
 			isa = PBXGroup;
 			children = (
-				85245B69222820A60058FEEC /* GetLocation */,
-				85245B68222820A60058FEEC /* Products */,
+				85245B8722296C6E0058FEEC /* SaveDateLocationPhoto */,
+				85245B8622296C6E0058FEEC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		85245B68222820A60058FEEC /* Products */ = {
+		85245B8622296C6E0058FEEC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				85245B67222820A60058FEEC /* GetLocation.app */,
+				85245B8522296C6E0058FEEC /* SaveDateLocationPhoto.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		85245B69222820A60058FEEC /* GetLocation */ = {
+		85245B8722296C6E0058FEEC /* SaveDateLocationPhoto */ = {
 			isa = PBXGroup;
 			children = (
-				85245B6A222820A60058FEEC /* AppDelegate.swift */,
-				85245B6C222820A60058FEEC /* ViewController.swift */,
-				85245B6E222820A60058FEEC /* Main.storyboard */,
-				85245B71222820A80058FEEC /* Assets.xcassets */,
-				85245B73222820A80058FEEC /* LaunchScreen.storyboard */,
-				85245B76222820A80058FEEC /* Info.plist */,
+				85245B8822296C6E0058FEEC /* AppDelegate.swift */,
+				85245B8A22296C6E0058FEEC /* ViewController.swift */,
+				85245B8C22296C6E0058FEEC /* Main.storyboard */,
+				85245B9222296C700058FEEC /* Assets.xcassets */,
+				85245B9422296C700058FEEC /* LaunchScreen.storyboard */,
+				85245B9722296C700058FEEC /* Info.plist */,
+				85245B8F22296C6E0058FEEC /* SaveDateLocationPhoto.xcdatamodeld */,
 			);
-			path = GetLocation;
+			path = SaveDateLocationPhoto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		85245B66222820A60058FEEC /* GetLocation */ = {
+		85245B8422296C6E0058FEEC /* SaveDateLocationPhoto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85245B79222820A80058FEEC /* Build configuration list for PBXNativeTarget "GetLocation" */;
+			buildConfigurationList = 85245B9A22296C700058FEEC /* Build configuration list for PBXNativeTarget "SaveDateLocationPhoto" */;
 			buildPhases = (
-				85245B63222820A60058FEEC /* Sources */,
-				85245B64222820A60058FEEC /* Frameworks */,
-				85245B65222820A60058FEEC /* Resources */,
+				85245B8122296C6E0058FEEC /* Sources */,
+				85245B8222296C6E0058FEEC /* Frameworks */,
+				85245B8322296C6E0058FEEC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = GetLocation;
-			productName = GetLocation;
-			productReference = 85245B67222820A60058FEEC /* GetLocation.app */;
+			name = SaveDateLocationPhoto;
+			productName = SaveDateLocationPhoto;
+			productReference = 85245B8522296C6E0058FEEC /* SaveDateLocationPhoto.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		85245B5F222820A60058FEEC /* Project object */ = {
+		85245B7D22296C6E0058FEEC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Joshua Okoro";
 				TargetAttributes = {
-					85245B66222820A60058FEEC = {
+					85245B8422296C6E0058FEEC = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 85245B62222820A60058FEEC /* Build configuration list for PBXProject "GetLocation" */;
+			buildConfigurationList = 85245B8022296C6E0058FEEC /* Build configuration list for PBXProject "SaveDateLocationPhoto" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -107,54 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 85245B5E222820A60058FEEC;
-			productRefGroup = 85245B68222820A60058FEEC /* Products */;
+			mainGroup = 85245B7C22296C6E0058FEEC;
+			productRefGroup = 85245B8622296C6E0058FEEC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				85245B66222820A60058FEEC /* GetLocation */,
+				85245B8422296C6E0058FEEC /* SaveDateLocationPhoto */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		85245B65222820A60058FEEC /* Resources */ = {
+		85245B8322296C6E0058FEEC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85245B75222820A80058FEEC /* LaunchScreen.storyboard in Resources */,
-				85245B72222820A80058FEEC /* Assets.xcassets in Resources */,
-				85245B70222820A60058FEEC /* Main.storyboard in Resources */,
+				85245B9622296C700058FEEC /* LaunchScreen.storyboard in Resources */,
+				85245B9322296C700058FEEC /* Assets.xcassets in Resources */,
+				85245B8E22296C6E0058FEEC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		85245B63222820A60058FEEC /* Sources */ = {
+		85245B8122296C6E0058FEEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85245B6D222820A60058FEEC /* ViewController.swift in Sources */,
-				85245B6B222820A60058FEEC /* AppDelegate.swift in Sources */,
+				85245B8B22296C6E0058FEEC /* ViewController.swift in Sources */,
+				85245B9122296C6E0058FEEC /* SaveDateLocationPhoto.xcdatamodeld in Sources */,
+				85245B8922296C6E0058FEEC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		85245B6E222820A60058FEEC /* Main.storyboard */ = {
+		85245B8C22296C6E0058FEEC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				85245B6F222820A60058FEEC /* Base */,
+				85245B8D22296C6E0058FEEC /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		85245B73222820A80058FEEC /* LaunchScreen.storyboard */ = {
+		85245B9422296C700058FEEC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				85245B74222820A80058FEEC /* Base */,
+				85245B9522296C700058FEEC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -162,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		85245B77222820A80058FEEC /* Debug */ = {
+		85245B9822296C700058FEEC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -223,7 +227,7 @@
 			};
 			name = Debug;
 		};
-		85245B78222820A80058FEEC /* Release */ = {
+		85245B9922296C700058FEEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -278,36 +282,36 @@
 			};
 			name = Release;
 		};
-		85245B7A222820A80058FEEC /* Debug */ = {
+		85245B9B22296C700058FEEC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AR3MJC486;
-				INFOPLIST_FILE = GetLocation/Info.plist;
+				INFOPLIST_FILE = SaveDateLocationPhoto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tru.GetLocation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tru.SaveDateLocationPhoto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		85245B7B222820A80058FEEC /* Release */ = {
+		85245B9C22296C700058FEEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AR3MJC486;
-				INFOPLIST_FILE = GetLocation/Info.plist;
+				INFOPLIST_FILE = SaveDateLocationPhoto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tru.GetLocation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tru.SaveDateLocationPhoto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,25 +321,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		85245B62222820A60058FEEC /* Build configuration list for PBXProject "GetLocation" */ = {
+		85245B8022296C6E0058FEEC /* Build configuration list for PBXProject "SaveDateLocationPhoto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				85245B77222820A80058FEEC /* Debug */,
-				85245B78222820A80058FEEC /* Release */,
+				85245B9822296C700058FEEC /* Debug */,
+				85245B9922296C700058FEEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		85245B79222820A80058FEEC /* Build configuration list for PBXNativeTarget "GetLocation" */ = {
+		85245B9A22296C700058FEEC /* Build configuration list for PBXNativeTarget "SaveDateLocationPhoto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				85245B7A222820A80058FEEC /* Debug */,
-				85245B7B222820A80058FEEC /* Release */,
+				85245B9B22296C700058FEEC /* Debug */,
+				85245B9C22296C700058FEEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		85245B8F22296C6E0058FEEC /* SaveDateLocationPhoto.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				85245B9022296C6E0058FEEC /* SaveDateLocationPhoto.xcdatamodel */,
+			);
+			currentVersion = 85245B9022296C6E0058FEEC /* SaveDateLocationPhoto.xcdatamodel */;
+			path = SaveDateLocationPhoto.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 85245B5F222820A60058FEEC /* Project object */;
+	rootObject = 85245B7D22296C6E0058FEEC /* Project object */;
 }
