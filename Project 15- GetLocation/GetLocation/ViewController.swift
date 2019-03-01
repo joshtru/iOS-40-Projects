@@ -13,6 +13,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
     }
     
     let locationManager = CLLocationManager()
@@ -39,9 +40,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         geocoder.reverseGeocodeLocation(manager.location!) { (placemarks, error) in
             if let placemarkData = placemarks {
                 let locationData = placemarkData[0]
-                print(locationData)
+                let city = locationData.locality!
+                let state = locationData.administrativeArea!
+                let country = locationData.country!
+                self.locationLabel.text = "\(city) \(state), \(country)"
+                self.locationLabel.textColor = UIColor.black
             } else {
-                print("Error: \(error?.localizedDescription)")
+                print("Error: \(error?.localizedDescription ?? "Unkown Error")")
             }
         }
         
