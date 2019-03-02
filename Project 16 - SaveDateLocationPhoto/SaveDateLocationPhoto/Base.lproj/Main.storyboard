@@ -64,28 +64,35 @@
                     <navigationItem key="navigationItem" title="New Entry" id="rqW-u0-cw2">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="I9X-Rk-JEf">
                             <color key="tintColor" red="0.28235294119999998" green="0.60392156860000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="BYZ-38-t0r" id="1Rj-yf-W0x"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cameraImage" destination="ODj-uC-SiS" id="5Un-eu-cI9"/>
+                        <outlet property="dateLabel" destination="k1F-lB-JZF" id="beE-9J-zaW"/>
+                        <outlet property="locationLabel" destination="olW-5a-5Kz" id="LNr-D1-dk4"/>
+                        <outlet property="textView" destination="yz1-um-S1A" id="wua-ux-tiH"/>
+                        <outlet property="toolbar" destination="7es-jJ-cOl" id="n6k-t9-os1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="7es-jJ-cOl">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="CXy-DN-mJ5">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gq-99-Z7b" userLabel="Camera">
                             <rect key="frame" x="16" y="11" width="21" height="21"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="21" id="H7M-NV-mrJ"/>
-                                <constraint firstAttribute="height" constant="21" id="Rp6-o6-eVR"/>
+                                <constraint firstAttribute="height" constant="21" id="3ob-im-PXH"/>
+                                <constraint firstAttribute="width" constant="21" id="KnM-c1-bUD"/>
                             </constraints>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="TaZ-2C-FvG">
-                            <rect key="frame" x="53" y="11" width="21" height="21"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="21" id="M1U-q0-IIb"/>
-                                <constraint firstAttribute="height" constant="21" id="z3W-Gw-aqY"/>
-                            </constraints>
-                        </imageView>
+                            <state key="normal" image="camera"/>
+                            <connections>
+                                <action selector="cameraButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GYq-mz-2aE"/>
+                            </connections>
+                        </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ODj-uC-SiS">
                             <rect key="frame" x="338" y="11" width="21" height="21"/>
                             <constraints>
@@ -93,23 +100,34 @@
                                 <constraint firstAttribute="width" constant="21" id="tEk-XZ-U7T"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olW-5a-5Kz">
-                            <rect key="frame" x="280" y="11" width="42" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olW-5a-5Kz">
+                            <rect key="frame" x="322" y="32" width="0.0" height="0.0"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cx-tm-nPR" userLabel="Location">
+                            <rect key="frame" x="53" y="11" width="21" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="Hy6-ta-bfI"/>
+                                <constraint firstAttribute="width" constant="21" id="wIR-bk-SI9"/>
+                            </constraints>
+                            <state key="normal" image="location"/>
+                            <connections>
+                                <action selector="locationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Suk-I2-eHM"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="kV2-Q0-dgu" firstAttribute="bottom" secondItem="olW-5a-5Kz" secondAttribute="bottom" constant="8" id="0aH-aJ-kPl"/>
-                        <constraint firstItem="CXy-DN-mJ5" firstAttribute="leading" secondItem="kV2-Q0-dgu" secondAttribute="leading" constant="16" id="DP8-xy-Riw"/>
-                        <constraint firstItem="kV2-Q0-dgu" firstAttribute="bottom" secondItem="CXy-DN-mJ5" secondAttribute="bottom" constant="8" id="KQa-3b-cf8"/>
-                        <constraint firstItem="kV2-Q0-dgu" firstAttribute="bottom" secondItem="TaZ-2C-FvG" secondAttribute="bottom" constant="8" id="LQB-Rz-Het"/>
-                        <constraint firstItem="TaZ-2C-FvG" firstAttribute="leading" secondItem="CXy-DN-mJ5" secondAttribute="trailing" constant="16" id="ZBo-1q-hRb"/>
+                        <constraint firstItem="9cx-tm-nPR" firstAttribute="leading" secondItem="4Gq-99-Z7b" secondAttribute="trailing" constant="16" id="3DM-RY-4Gk"/>
                         <constraint firstItem="ODj-uC-SiS" firstAttribute="leading" secondItem="olW-5a-5Kz" secondAttribute="trailing" constant="16" id="ar6-cP-yBx"/>
+                        <constraint firstItem="kV2-Q0-dgu" firstAttribute="bottom" secondItem="9cx-tm-nPR" secondAttribute="bottom" constant="8" id="cb2-hQ-d3c"/>
                         <constraint firstItem="kV2-Q0-dgu" firstAttribute="bottom" secondItem="ODj-uC-SiS" secondAttribute="bottom" constant="8" id="jq2-Yr-RFj"/>
+                        <constraint firstItem="4Gq-99-Z7b" firstAttribute="leading" secondItem="kV2-Q0-dgu" secondAttribute="leading" constant="16" id="nwH-a9-wbJ"/>
                         <constraint firstItem="kV2-Q0-dgu" firstAttribute="trailing" secondItem="ODj-uC-SiS" secondAttribute="trailing" constant="16" id="ruK-8D-u8Z"/>
+                        <constraint firstItem="kV2-Q0-dgu" firstAttribute="bottom" secondItem="4Gq-99-Z7b" secondAttribute="bottom" constant="8" id="tUH-fZ-UBg"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="kV2-Q0-dgu"/>
                 </view>
