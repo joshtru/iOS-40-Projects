@@ -15,6 +15,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         textView.inputAccessoryView = toolbar
         textView.becomeFirstResponder()
+        locationManager.delegate = self
+        getCurrentDateAndTime()
         
     }
     // MARK: - Outlets
@@ -32,7 +34,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.sourceType = .savedPhotosAlbum
         present(imagePicker, animated: true, completion: nil)
         imagePicker.delegate = self
-        locationManager.delegate = self
     }
     
     @IBAction func locationButtonPressed(_ sender: UIButton) {
@@ -85,7 +86,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-
+    // MARK: - Date And Time
+    func getCurrentDateAndTime() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .medium
+        dateFormatter.dateFormat = "MMMM d, yyyy 'at' h:mm a"
+        dateLabel.text = dateFormatter.string(from: Date())
+    }
     
     
     
