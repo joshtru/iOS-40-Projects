@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		85245B8522296C6E0058FEEC /* SaveDateLocationPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveDateLocationPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85245B8522296C6E0058FEEC /* ButtonsAboveKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButtonsAboveKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85245B8822296C6E0058FEEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85245B8A22296C6E0058FEEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		85245B8D22296C6E0058FEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		85245B7C22296C6E0058FEEC = {
 			isa = PBXGroup;
 			children = (
-				85245B8722296C6E0058FEEC /* SaveDateLocationPhoto */,
+				85245B8722296C6E0058FEEC /* ButtonsAboveKeyboard */,
 				85245B8622296C6E0058FEEC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		85245B8622296C6E0058FEEC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				85245B8522296C6E0058FEEC /* SaveDateLocationPhoto.app */,
+				85245B8522296C6E0058FEEC /* ButtonsAboveKeyboard.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		85245B8722296C6E0058FEEC /* SaveDateLocationPhoto */ = {
+		85245B8722296C6E0058FEEC /* ButtonsAboveKeyboard */ = {
 			isa = PBXGroup;
 			children = (
 				85245B8822296C6E0058FEEC /* AppDelegate.swift */,
@@ -64,15 +64,15 @@
 				85245B9722296C700058FEEC /* Info.plist */,
 				85245B8F22296C6E0058FEEC /* SaveDateLocationPhoto.xcdatamodeld */,
 			);
-			path = SaveDateLocationPhoto;
+			path = ButtonsAboveKeyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		85245B8422296C6E0058FEEC /* SaveDateLocationPhoto */ = {
+		85245B8422296C6E0058FEEC /* ButtonsAboveKeyboard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85245B9A22296C700058FEEC /* Build configuration list for PBXNativeTarget "SaveDateLocationPhoto" */;
+			buildConfigurationList = 85245B9A22296C700058FEEC /* Build configuration list for PBXNativeTarget "ButtonsAboveKeyboard" */;
 			buildPhases = (
 				85245B8122296C6E0058FEEC /* Sources */,
 				85245B8222296C6E0058FEEC /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = SaveDateLocationPhoto;
+			name = ButtonsAboveKeyboard;
 			productName = SaveDateLocationPhoto;
-			productReference = 85245B8522296C6E0058FEEC /* SaveDateLocationPhoto.app */;
+			productReference = 85245B8522296C6E0058FEEC /* ButtonsAboveKeyboard.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 85245B8022296C6E0058FEEC /* Build configuration list for PBXProject "SaveDateLocationPhoto" */;
+			buildConfigurationList = 85245B8022296C6E0058FEEC /* Build configuration list for PBXProject "ButtonsAboveKeyboard" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				85245B8422296C6E0058FEEC /* SaveDateLocationPhoto */,
+				85245B8422296C6E0058FEEC /* ButtonsAboveKeyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -288,13 +288,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AR3MJC486;
-				INFOPLIST_FILE = SaveDateLocationPhoto/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ButtonsAboveKeyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tru.SaveDateLocationPhoto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tru.ButtonsAboveKeyboard;
+				PRODUCT_NAME = ButtonsAboveKeyboard;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -306,13 +306,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AR3MJC486;
-				INFOPLIST_FILE = SaveDateLocationPhoto/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ButtonsAboveKeyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tru.SaveDateLocationPhoto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tru.ButtonsAboveKeyboard;
+				PRODUCT_NAME = ButtonsAboveKeyboard;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,7 +321,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		85245B8022296C6E0058FEEC /* Build configuration list for PBXProject "SaveDateLocationPhoto" */ = {
+		85245B8022296C6E0058FEEC /* Build configuration list for PBXProject "ButtonsAboveKeyboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				85245B9822296C700058FEEC /* Debug */,
@@ -330,7 +330,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		85245B9A22296C700058FEEC /* Build configuration list for PBXNativeTarget "SaveDateLocationPhoto" */ = {
+		85245B9A22296C700058FEEC /* Build configuration list for PBXNativeTarget "ButtonsAboveKeyboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				85245B9B22296C700058FEEC /* Debug */,
